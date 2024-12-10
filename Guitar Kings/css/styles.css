@@ -63,12 +63,28 @@ header a {
     padding: 0.5%;
 }
 
-.site_description img {
+.profilePictures{
+    border-radius: 50%;
+}
+
+.siteDescriptionImg {
     height: auto;
+    border-radius: 100px;
     max-width: 85%;
 }
 
 
 footer {
     text-align: center;
+}
+
+/* Home Page */
+
+.coverImage {
+    background-image: url("../images/home-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    background-position-x: right;
+    background-position-y: bottom;
 }
