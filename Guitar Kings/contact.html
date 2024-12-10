@@ -22,12 +22,31 @@
                 </ul>
             </nav>
         </header>
-        <h1>Hello Contacts!</h1>
+        <h1>Contact</h1>
+        <fieldset>
+            <form method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="guitars">Guitar</label>
+                <select name="guitars" id="guitars">
+                    <option value="Adirondack Red">Adirondack Red</option>
+                    <option value="Adirondack Blue">Adirondack Blue</option>
+                    <option value="Adirondack Green">Adirondack Green</option>
+                </select>
+                <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
+                <label for="newsletter">Sign up for email updates</label>
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+                <a href="contact.html" class="cta">Send Now</a>
+            </form>
+        </fieldset>
+        <section>
+            <br>
+            <footer>
+                Copyright &copy;
+            </footer>
     </body>
-    <section>
-        <br>
-        <footer>
-            Copyright &copy;
-        </footer>
     </section>
 </html>
