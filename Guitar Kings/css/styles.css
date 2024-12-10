@@ -25,23 +25,47 @@ footer {
 
 header a {
     color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    padding: 0px;
+    text-align: left;
+}
+
+nav li, a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.current {
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 .cta {
     background-color: #BB0000;
     color: white;
-    padding: 0.5%;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 10px 80px 10px;
     border-radius: 5px;
 }
 
-.cta-view {
+.cta__view {
     background-color: #BB0000;
     color: white;
+    font-size: 0.8em;
+    padding: 8px 30px 8px;
+    border-radius: 5px;
 }
 
-.cta-sale {
+.cta__sale {
     background-color: #127300;
     color: white;
+    font-size: 0.8em;
+    padding: 8px 30px 8px;
+    border-radius: 5px;
 }
 
 .reviews {
@@ -57,11 +81,6 @@ header a {
     max-width: 75%;
 }
 
-.feautered--products a {
-    color: white;
-    border-radius: 10%;
-    padding: 0.5%;
-}
 
 .profilePictures{
     border-radius: 50%;
@@ -87,4 +106,17 @@ footer {
     min-height: 70vh;
     background-position-x: right;
     background-position-y: bottom;
+}
+
+.product__specific {
+    height: auto;
+    max-width: 80%;
+}
+
+.back__button {
+    background-color: #BB0000;
+    color: #fff;
+    font-size: 1em;
+    padding: 8px 30px 8px;
+    border-radius: 5px;
 }
