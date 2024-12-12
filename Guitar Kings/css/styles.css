@@ -1,122 +1,160 @@
+/* Functional (top menu etc.) */
+
 @font-face {
-    font-family: "Boots And Spurs";
-    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+  font-family: "Boots And Spurs";
+  src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
 }
 
 body {
-    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, sans-serif;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 .logo {
-    font-family: "Boots And Spurs", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Boots And Spurs", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .product-list h2 {
-    font-family: "Roboto",'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, sans-serif;
 }
 
-header, 
+header {
+  display: flex;
+  align-items: center;
+}
+
+header,
 footer {
-    background-color: #202020;
-    color: white;
+  background-color: #202020;
+  color: white;
 }
 
 header a {
-    color: #fff;
-    padding: 10px;
+  color: #fff;
+  padding: 10px;
 }
 
 nav ul {
-    padding: 0px;
-    text-align: left;
+  padding: 0px;
+  text-align: left;
 }
 
-nav li, a {
-    display: inline-block;
-    text-decoration: none;
+nav {
+  margin-left: 25px;
+}
+
+nav li,
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .current {
-    text-decoration: underline;
-    font-weight: 600;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .cta {
-    background-color: #BB0000;
-    color: white;
-    font-size: 1em;
-    text-transform: uppercase;
-    padding: 10px 80px 10px;
-    border-radius: 5px;
+  background-color: #bb0000;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px 80px 10px;
+  border-radius: 5px;
 }
 
 .cta__view {
-    background-color: #BB0000;
-    color: white;
-    font-size: 0.8em;
-    padding: 8px 30px 8px;
-    border-radius: 5px;
+  background-color: #bb0000;
+  color: white;
+  font-size: 0.8em;
+  padding: 8px 30px 8px;
+  border-radius: 5px;
 }
 
 .cta__sale {
-    background-color: #127300;
-    color: white;
-    font-size: 0.8em;
-    padding: 8px 30px 8px;
-    border-radius: 5px;
+  background-color: #127300;
+  color: white;
+  font-size: 0.8em;
+  padding: 8px 30px 8px;
+  border-radius: 5px;
 }
-
-.reviews {
-    background-color: #e8e8e8;
-}
-
-.feautered--products {
-    background-color: #fbfbfb;
-}
-
-.feautered--products img {
-    height: auto;
-    max-width: 75%;
-}
-
-
-.profilePictures{
-    border-radius: 50%;
-}
-
-.siteDescriptionImg {
-    height: auto;
-    border-radius: 100px;
-    max-width: 85%;
-}
-
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
 /* Home Page */
 
-.coverImage {
-    background-image: url("../images/home-header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 70vh;
-    background-position-x: right;
-    background-position-y: bottom;
+.welcome {
+  background-image: url("../images/home-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  background-position-x: right;
+  background-position-y: bottom;
+  position: relative;
 }
 
+.welcome__content {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 100px;
+}
+
+.site-description,
+.reviews__detailed {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.site-description > *,
+.reviews__detailed > * {
+  flex: 1;
+}
+
+.site-description__image {
+  border-radius: 100px;
+  width: 100%;
+}
+
+.reviews {
+  background-color: #e8e8e8;
+  text-align: center;
+  padding: 50px;
+}
+
+.reviews__detailed {
+  text-align: left;
+}
+
+.reviews img {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.products {
+  background-color: #fbfbfb;
+}
+
+.products img {
+  height: auto;
+  max-width: 75%;
+}
+
+/* For the specific product page */
+
 .product__specific {
-    height: auto;
-    max-width: 80%;
+  height: auto;
+  max-width: 80%;
 }
 
 .back__button {
-    background-color: #BB0000;
-    color: #fff;
-    font-size: 1em;
-    padding: 8px 30px 8px;
-    border-radius: 5px;
+  background-color: #bb0000;
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 30px 8px;
+  border-radius: 5px;
 }
