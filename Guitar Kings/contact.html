@@ -28,11 +28,11 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div>
-        <h1 class="contact">Contact</h1>
-        <fieldset>
-          <form method="post">
+    <main class="contact">
+      <h1>Contact</h1>
+      <form method="post">
+        <div class="contact__fieldset">
+          <section>
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" />
             <label for="email">Email</label>
@@ -43,19 +43,26 @@
               <option value="Adirondack Blue">Adirondack Blue</option>
               <option value="Adirondack Green">Adirondack Green</option>
             </select>
-            <input
-              type="checkbox"
-              name="newsletter"
-              id="newsletter"
-              value="newsletter"
-            />
-            <label for="newsletter">Sign up for email updates</label>
+            <div>
+              <input
+                type="checkbox"
+                name="newsletter"
+                id="newsletter"
+                value="newsletter"
+              />
+              <label for="newsletter">Sign up for email updates</label>
+            </div>
+          </section>
+          <section>
+            <div class="contact__fieldset">
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
-            <a href="contact.html" class="cta">Send Now</a>
-          </form>
-        </fieldset>
-      </div>
+            <textarea name="message" id="message" rows="15" cols="40"></textarea>
+          </section>
+        </div>
+      </form>
+      <section>
+        <a href="contact.html" class="cta">Send Now</a>
+      </section>
     </main>
     <footer>Copyright &copy;</footer>
   </body>

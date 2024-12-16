@@ -130,9 +130,18 @@ footer {
   text-align: left;
 }
 
+.reviews__detailed div {
+  margin: 50px;
+}
+
 .reviews img {
   border-radius: 50%;
   max-width: 100px;
+  float: right;
+}
+
+.reviews__name {
+  display: block;
 }
 
 .products {
@@ -146,9 +155,38 @@ footer {
 
 /* For the specific product page */
 
-.product__specific {
-  height: auto;
-  max-width: 80%;
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-specific__text {
+  padding: 0px 30px;
+}
+
+.product-specific__price {
+  font-size: 1.5em;
+}
+
+.product-specific__images {
+  width: 100%;
+}
+
+.product-specific__images-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.product-specific a {
+  display: block;
+  width: 97px;
+  margin: auto;
 }
 
 .back__button {
@@ -157,4 +195,39 @@ footer {
   font-size: 1em;
   padding: 8px 30px 8px;
   border-radius: 5px;
+}
+
+/* CONTACT PAGE */
+
+input,
+select,
+textarea {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.contact__fieldset {
+  border: #fff;
+  display: flex;
+  text-align: left;
+  width: 100%;
+}
+
+.contact__fieldset > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
