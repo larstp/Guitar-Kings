@@ -26,6 +26,8 @@ h2,
 header {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  max-height: 45px;
 }
 
 header,
@@ -39,19 +41,35 @@ header a {
   padding: 10px;
 }
 
+nav {
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  z-index: 1000;
+  background-color: #202020;
+  right: 0px;
+  min-height: 100%;
+}
+
 nav ul {
   padding: 0px;
   text-align: left;
 }
 
-nav {
-  margin-left: 25px;
-}
-
 nav li,
 a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
 }
 
 .current {
@@ -64,7 +82,8 @@ a {
   color: white;
   font-size: 1em;
   text-transform: uppercase;
-  padding: 10px 80px 10px;
+  text-wrap: nowrap;
+  padding: 10px 40px;
   border-radius: 5px;
 }
 
@@ -99,7 +118,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 70vh;
-  background-position-x: right;
+  background-position-x: center;
   background-position-y: bottom;
   position: relative;
 }
@@ -107,8 +126,9 @@ footer {
 .welcome__content {
   position: absolute;
   text-align: center;
-  top: 100px;
-  left: 100px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .site-description,
@@ -116,6 +136,7 @@ footer {
   max-width: 1000px;
   margin: 50px auto;
   display: flex;
+  flex-direction: column;
 }
 
 .site-description > *,
@@ -126,6 +147,7 @@ footer {
 .site-description__image {
   border-radius: 100px;
   width: 100%;
+  max-width: 400px;
 }
 
 .reviews {
@@ -139,7 +161,7 @@ footer {
 }
 
 .reviews__detailed div {
-  margin: 50px;
+  margin: 20px;
 }
 
 .reviews img {
@@ -154,7 +176,7 @@ footer {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   max-width: 1000px;
   margin: 50px auto;
   gap: 10px;
@@ -303,4 +325,55 @@ form {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* Media */
+
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-description,
+  .reviews__detailed {
+    flex-direction: row;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav li {
+    display: inline-flex;
+    padding: 0px;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  header label {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .featured {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .reviews__detailed p {
+    margin: 50px;
+  }
+  .welcome {
+    background-position-x: right;
+  }
+  .welcome__content {
+    top: 100px;
+    left: 100px;
+    transform: none;
+  }
+  .cta {
+    padding: 10px 80px;
+  }
 }
