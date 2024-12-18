@@ -17,6 +17,7 @@ h1,
 h2,
 .logo {
   font-family: "Boots And Spurs", Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
 .product-list h2 {
@@ -49,7 +50,6 @@ nav {
   z-index: 1000;
   background-color: #202020;
   right: 0px;
-  min-height: 100%;
 }
 
 nav ul {
@@ -85,6 +85,8 @@ a {
   text-wrap: nowrap;
   padding: 10px 40px;
   border-radius: 5px;
+  max-width: 100px;
+  margin: auto;
 }
 
 .cta__view {
@@ -104,6 +106,10 @@ a {
   padding: 8px 20px 8px;
   border-radius: 5px;
   text-align: center;
+}
+
+main {
+  padding: 20px;
 }
 
 footer {
@@ -129,6 +135,7 @@ footer {
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
+  min-width: 210px;
 }
 
 .site-description,
@@ -148,6 +155,11 @@ footer {
   border-radius: 100px;
   width: 100%;
   max-width: 400px;
+}
+
+.site-description h2 {
+  text-align: left;
+  margin-left: 10px;
 }
 
 .reviews {
@@ -230,13 +242,17 @@ footer {
 .product-list {
   background-color: #fbfbfb;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 20px;
 }
 
 .product-list h1 {
   grid-column: -1/1;
+}
+
+.product-list h2 {
+  text-align: left;
 }
 
 .product-list img {
@@ -253,7 +269,7 @@ footer {
 .product-specific {
   display: flex;
   max-width: 1000px;
-  margin: 50px auto;
+  flex-direction: column;
 }
 
 .product-specific > * {
@@ -262,6 +278,7 @@ footer {
 
 .product-specific__text {
   padding: 0px 30px;
+  margin-bottom: 50px;
 }
 
 .product-specific__price {
@@ -318,7 +335,8 @@ form {
   border: #fff;
   display: flex;
   text-align: left;
-  width: 100%;
+  flex-direction: column;
+  max-width: ;
 }
 
 .contact__fieldset > * {
@@ -328,6 +346,12 @@ form {
 }
 
 /* Media */
+
+@media (min-width: 400px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (min-width: 600px) {
   .featured {
@@ -349,12 +373,25 @@ form {
     padding: 0px;
   }
 
+  nav ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
   header {
     justify-content: start;
   }
 
   header label {
     display: none;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-specific {
+    flex-direction: column-reverse;
   }
 }
 
@@ -375,5 +412,14 @@ form {
   }
   .cta {
     padding: 10px 80px;
+  }
+
+  .product-specific {
+    flex-direction: row;
+    margin: 10px auto;
+  }
+
+  .product-specific__text {
+    margin-bottom: 0px;
   }
 }
