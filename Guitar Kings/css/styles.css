@@ -158,7 +158,7 @@ footer {
 }
 
 .site-description h2 {
-  text-align: left;
+  text-align: center;
   margin-left: 10px;
 }
 
@@ -336,7 +336,6 @@ form {
   display: flex;
   text-align: left;
   flex-direction: column;
-  max-width: ;
 }
 
 .contact__fieldset > * {
@@ -361,6 +360,10 @@ form {
   .site-description,
   .reviews__detailed {
     flex-direction: row;
+  }
+
+  .site-description h2 {
+    text-align: left;
   }
 
   nav {
@@ -421,5 +424,10 @@ form {
 
   .product-specific__text {
     margin-bottom: 0px;
+  }
+
+  .contact__fieldset {
+    flex-direction: row;
+    flex: 0 0 auto;
   }
 }
